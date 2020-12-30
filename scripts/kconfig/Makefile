@@ -5,13 +5,12 @@
 
 PHONY += xconfig gconfig menuconfig config silentoldconfig update-po-config \
 	localmodconfig localyesconfig
-
 ifdef KBUILD_KCONFIG
 Kconfig := $(KBUILD_KCONFIG)
 else
 Kconfig := Kconfig
 endif
-
+$(info $$SRCARCH is [${SRCARCH}])
 ifeq ($(quiet),silent_)
 silent := -s
 endif
